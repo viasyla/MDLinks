@@ -1,10 +1,18 @@
-const mdLinks = require('../');
+// const mdLinks = require('../');
+import { mdlinks } from "../mdlinks.js";
 
+describe('mdlinks', () => {
 
-describe('mdLinks', () => {
+  it('mdlinks procesa un solo archivo con 3 links.', () => {
+    const ruta = 'ejemplo.md';
 
-  it('should...', () => {
-    console.log('FIX ME!');
-  });
+    return mdlinks (ruta, {validate: false})
+    .then(
+      (array) => {
+        expect (array).toEqual([]);
+      }
+    );//final de .then
+    // console.log('FIX ME!');
+  });//final de it
 
-});
+});//final de funcion describe
